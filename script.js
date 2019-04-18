@@ -6,3 +6,5 @@ const clientSecret = '27c327f64cb0e1745bcfde92e63ac5eb087c4ebae2b66a839cedddaa71
 
 const queryString = new URLSearchParams();
 const accessToken = urlParams.get('code');
+
+console.log(accessToken);
