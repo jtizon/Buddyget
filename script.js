@@ -5,19 +5,19 @@ const clientID = 'fb6f52cbbca9da328e5869a4e27910ef18471fbc8975de4a3e861efc65900c
 const clientSecret = '27c327f64cb0e1745bcfde92e63ac5eb087c4ebae2b66a839cedddaa71de76b5';
 
 
-const queryString = new URLSearchParams('code');
-const accessToken = queryString.get('code');
+var urlParams = new URLSearchParams(window.location.search);
+const accessToken = urlParams.get('code');
 
-console.log(queryString);
+console.log(accessToken);
 
-function getUrlVars() {
-    var vars = {};
-    var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
-        vars[key] = value;
-    });
-    return vars;
-}
+//function getUrlVars() {
+//    var vars = {};
+//    var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+//        vars[key] = value;
+//    });
+//    return vars;
+//}
 
-var number = getUrlVars()["code"];
+//var accessToken = getUrlVars()["code"];
 
-console.log(number);
+//console.log(accessToken);
