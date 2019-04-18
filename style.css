@@ -34,15 +34,17 @@ body {
   .navbar h1:hover{
     color: #5F65FE;
   }
-  #js-ynab-button:hover{
+  .button:hover{
     color: white;
   }
   
-  #js-ynab-button{
+  .button{
     font-size: 24px;
-    font-weight: 1;
+    font-weight: 100;
+    color: black;
+    text-align: center;
     width: 300px;
-    height: 100px;
+    height: 80px;
     padding: 20px;
     position: absolute;
     top: 50%;
@@ -50,6 +52,7 @@ body {
     margin: -70px 0 0 -170px;
     border-radius: 10px;
     background-color: #5F65FE;
+    text-decoration: none;
   }
   
   .ynab{
