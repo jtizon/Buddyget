@@ -9,3 +9,15 @@ const queryString = new URLSearchParams('code');
 const accessToken = queryString.get('code');
 
 console.log(queryString);
+
+function getUrlVars() {
+    var vars = {};
+    var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+        vars[key] = value;
+    });
+    return vars;
+}
+
+var number = getUrlVars()["code"];
+
+console.log(number);
