@@ -9,15 +9,12 @@ var urlParams = new URLSearchParams(window.location.search);
 const accessToken = urlParams.get('code');
 
 console.log(accessToken);
+const searchURL = 'https://api.youneedabudget.com/v1';
 
-//function getUrlVars() {
-//    var vars = {};
-//    var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
-//        vars[key] = value;
-//    });
-//    return vars;
-//}
+function formatQueryParams(params) {
+    const queryItems = Object.keys(params)
+      .map(key => `${encodeURIComponent(key)}=${encodeURIComponent(params[key])}`)
+    return queryItems.join('&');
+  }
+}
 
-//var accessToken = getUrlVars()["code"];
-
-//console.log(accessToken);
